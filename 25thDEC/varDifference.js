@@ -5,7 +5,7 @@
 //   names: 'user',
 //   num: 50505,
 // }; //n
-// testinVariables();
+
 //    console.log("testVarConsole",testVar);
 //    console.log("testLetConsole",testLet);
 //    console.log("testConstConsole",testConst);
@@ -36,10 +36,10 @@
 
 //reassigning or chage values of variable
 // testVar = 41; //y
-// testvarLet = 31; //y
+// testLet = 31; //y
 // testConst = 3443; //n
 
 // var vs let
 console.log(x);
- x = 5;
+let x = 5;
 console.log(x);

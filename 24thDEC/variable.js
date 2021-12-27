@@ -1,3 +1,5 @@
+//hoisting
+
 var a = 10;
 user();
 function user() {
