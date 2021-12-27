@@ -1,5 +1,5 @@
 let x;
-x = ;
+x = y;
 console.log(typeof x);
 
 let z = 50;
