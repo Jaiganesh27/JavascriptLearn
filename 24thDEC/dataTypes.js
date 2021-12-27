@@ -1,11 +1,10 @@
-//Numbers
-let x;
+let x;//Numbers
+x = 20;
 console.log(typeof x);
 
 let z = 50;
 let y = '123.545';
-console.log(typeof (z + y));
-
+console.log(z + y);
 // y = parseInt(y);
 // console.log(z + y);
 
@@ -30,3 +29,5 @@ console.log(typeof (z + y));
 //   }
 // }
 // nullUndefinedCheck();
+
+

@@ -1,10 +1,10 @@
 //without initilising
-var testVar; //y
-let testLet; //y
-const testConst = {
-  names: 'user',
-  num: 50505,
-}; //n
+// var testVar; //y
+// let testLet; //y
+// const testConst = {
+//   names: 'user',
+//   num: 50505,
+// }; //n
 // testinVariables();
 //    console.log("testVarConsole",testVar);
 //    console.log("testLetConsole",testLet);
@@ -38,3 +38,8 @@ const testConst = {
 // testVar = 41; //y
 // testvarLet = 31; //y
 // testConst = 3443; //n
+
+// var vs let
+console.log(x);
+ x = 5;
+console.log(x);
