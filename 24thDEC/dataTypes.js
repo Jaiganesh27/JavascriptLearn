@@ -1,46 +1,32 @@
-// datatypes in javascript
-// primitive and non primitive data types 
-// string , number , boolean , null , undefined ,symbol
-// String
-var names;
-console.log(typeof names);
-names = "jaiganesh";
-console.log(typeof names);
-names = 123;
-console.log(typeof names);
-names = true;
-console.log(typeof names);
-names = null;
-// The value null represents the intentional absence of any object value
-console.log(typeof names);
-names = [10,"jai","blue",true];
+//Numbers
+let x;
+console.log(typeof x);
 
-console.log(typeof names);
+let z = 50;
+let y = '123.545';
+console.log(typeof (z + y));
 
-function add(){
-    console.log("hii");
-}
-console.log(typeof add);
-function nullUndefinedCheck(){
-    if(undefined == null){
-        console.log("hii iam working");
-    }
+// y = parseInt(y);
+// console.log(z + y);
 
-    if(undefined === null){
-        console.log("hii iam working");
-    }
-}
-nullUndefinedCheck();
-// non primitive data types
-// arrays
-const cars = ["Saab", "Volvo", "BMW"];
-console.log("arrays",cars);
-const objectdata = {
-    studentName: "jaiganesh",
-    clg:"dbjain",
-    area: "chennai",
-    mobile:9000060000
-};
+// var str = 'gokul's watch  is mine';
+// console.log('str  :', str);
 
-objectdata.studentName = "google";
-console.log("objectdata.studentdata",objectdata.studentName);
+//boolean
+// trueval = true ;
+// console.log("trueval", trueval);
+
+//null
+// valuecheck = undefined;
+// console.log(valuecheck + 5 );
+
+// function nullUndefinedCheck() {
+//   if (undefined == null) {
+//     console.log('== works');
+//   }
+
+//   if (undefined === null) {
+//     console.log('=== works');
+//   }
+// }
+// nullUndefinedCheck();

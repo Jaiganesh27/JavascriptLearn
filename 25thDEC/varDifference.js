@@ -1,37 +1,40 @@
 //without initilising
-var testVar;
-let testLet;
-const testConst = 5455;
-console.log(
-  'testvar',
-  typeof testVar,
-  'testLet',
-  typeof testLet,
-  'testCosnt',
-  typeof testConst
-);
-
-// with initialising
-// var testVar = 'it is var string';
-// let testLet = 'it is let string';
-// const testConst  = 'it is const sting';
-
-//redeclare in samescpe
-// var testVar = 41;
-// let testLet = 31;
-// const testConst = 3443;
-
-//redeclare in localscope
-// function testinVariables(){
-//    var testVar = 41;
-//    let testLet = 31;
-//    const testConst = 3443;
+var testVar; //y
+let testLet; //y
+const testConst = {
+  names: 'user',
+  num: 50505,
+}; //n
+// testinVariables();
 //    console.log("testVarConsole",testVar);
 //    console.log("testLetConsole",testLet);
 //    console.log("testConstConsole",testConst);
+
+// // // with initialising
+// var testVar = 'it is var string'; //y
+// let testLet = 'it is let string'; //y
+// const testConst = 'it is const sting'; //y
+// console.log('testVarConsole', testVar);
+// console.log('testLetConsole', testLet);
+// console.log('testConstConsole', testConst);
+
+//redeclare in samescpe
+// var testVar = 41;  //y
+// let testLet = 31; //n
+// const testConst = 3443; //n
+
+//redeclare in localscope
+// function testinVariables() {
+// var testVar = 41; //y
+// let testLet = 31; //y
+// const testConst = 3443; //y
+
+//   console.log('testVarConsole', testVar);
+//   console.log('testLetConsole', testLet);
+//   console.log('testConstConsole', testConst);
 // }
 
 //reassigning or chage values of variable
-// testVar = 41;
-// testLet = 31;
-// testConst = 3443;
+// testVar = 41; //y
+// testvarLet = 31; //y
+// testConst = 3443; //n
