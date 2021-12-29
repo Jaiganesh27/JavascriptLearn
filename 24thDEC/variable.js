@@ -7,7 +7,7 @@ function user() {
   let userName;
   userName = 'ramesh';
   console.log('expe type', typeof expe);
-  // expe();
+  expe();
   var expe = function () {
     console.log('hii ' + userName);
   };
