@@ -3,9 +3,12 @@ const obj = {
   // object are assigned with key value pair
   userName: 'jaiganesh',
   age: 21,
+  age:43,
   loc: 'chennai',
   123: 'value',
+  // 123:'js',
   null: 30,
+  null:40,
   undefined: [1, 2, 3, [{}], [[]], 5, 6],
   undefined: 43543,
   print: function () {
@@ -14,10 +17,10 @@ const obj = {
 };
 
 // const field = 'age';
-// console.log(obj);
+console.log(obj);
 // // obj.print.call({name:'jai'});
 
-// obj.print.call({userName:'jaigan'});
+// obj.,print.call({userName:'jaigan'});
 
 obj.print();
 // obj.userName = 'google';
