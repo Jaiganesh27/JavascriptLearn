@@ -6,7 +6,7 @@ let password = 12345;
 // false,0,-0,On,emptystring,null,undefined,NaN
 
 falseValueCheck = () => {
-    if(false)
+    if(null)
     console.log('this wil not print for falsy values');
 }
 
