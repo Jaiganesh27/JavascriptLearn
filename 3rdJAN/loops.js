@@ -10,11 +10,11 @@ SObject = {
 SString = 'I am Sample String';
 
 // Diff while for in loop 
-for(let loop in SArray)
+for(let loop of SArray)
     console.log(loop,SArray[loop]);
-for(let loop in SString)  
+for(let loop of SString)  
     console.log(loop,SString[loop]);
-for(let loop in SObject)
+for(let loop of SObject)
     console.log(loop ,SObject[loop]);
 
 

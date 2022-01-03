@@ -37,7 +37,8 @@ if(conValue)
     console.log("Your Name Is Jaiganesh");
 }
 
-
+// newvalue = (conValue = userName);
+// console.log("newValue",newvalue);
 //
 function checkAssignment() {
 if((conValue = userName))

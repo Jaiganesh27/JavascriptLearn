@@ -20,12 +20,13 @@ else{
     console.log(`Wrong input given please put valid amout`);
 }
 
-
-let weekday = new Date();
+dateArray = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+let tempday = new Date().getDay();
 // Switch Case
-
-console.log(getDay)
-switch(weekday.getDay)
+// weekday = weekday.getDay()
+weekday = dateArray[tempday];
+console.log("weekday",weekday);
+switch(weekday)
 {
     case 'sunday':
         console.log('Today is Sunday!');
