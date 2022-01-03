@@ -7,6 +7,7 @@ SObject = {
     ULoc:'Chennai',
     UMobile:'9000050000'
 }
+
 SString = 'I am Sample String';
 
 // Diff while for in loop 

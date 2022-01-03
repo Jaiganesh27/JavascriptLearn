@@ -27,11 +27,7 @@
 //  console.log(i);
 // }
 const number ='sdfsf';
-let value;
-for (let n of  number) {
+
+for (let n of  number[Symbol.iterator]()) {
     console.log(n);
-    value+=n;
 }
-console.log(value);
-
-
