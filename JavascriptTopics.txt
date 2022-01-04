@@ -1,0 +1,32 @@
+Javascript Learning Topics
+--------------------------
+
+1) Basic Understanding : 
+   ---------------------
+   --> What Is Javascript, Where we can use it.
+   --> How Javascript Run
+   --> Javascript Engine Works
+
+2) Hoisting :
+   ----------
+   --> Hoisting in Javascript
+   --> Variable hoisting and functional hoisting.
+
+3) DataTypes and Variables:
+   ------------------------
+   --> Types of  Datatypes.(primitive and non primitive datatypes)
+   --> Variable keywords in javascript.
+   --> Scope of Variables.
+   --> var vs let vs const
+  
+4) Functions:
+   ----------
+   --> Function and its definition, why we use it
+   --> Types of Functions and their uses.
+   --> Function Declaration, Expression ,Arrow ,Generator ,shorthand,IIF etc.
+   --> Rest Operator.
+
+5) Conditional and Looping: 
+---------------------------
+   --> Conditional Statements like, if ,if-else,nested-if,switch.
+   --> Loops - for ,for in,for of,while and do-while loop and their diff. uses.
