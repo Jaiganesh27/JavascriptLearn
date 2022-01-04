@@ -30,3 +30,9 @@ Javascript Learning Topics
 ---------------------------
    --> Conditional Statements like, if ,if-else,nested-if,switch.
    --> Loops - for ,for in,for of,while and do-while loop and their diff. uses.
+
+6) Arrays - Array Prototypes:
+-----------------------------
+   --> One Dimensional , Multi Dimensional Arrays
+   --> Array Prototypes(Methods).
+   
