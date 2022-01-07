@@ -37,7 +37,7 @@ const obje = {
   },
 };
 short = () => {
- console.log("hiii am working");
+  console.log("hiii am working");
 }
 short();
 // obje.short();

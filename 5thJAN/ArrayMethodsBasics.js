@@ -38,7 +38,7 @@ console.log(fruits)
 
 
 // flat
-flatarray = [0, 1, 2, [3, 4]];
+flatarray = [0, 1, 2, [[[3, 4]]]]; [0,1,2,3,4];
 temp = flatarray.flat(2);
 console.log(temp);
 [0,1,2,3,4]
@@ -46,21 +46,26 @@ console.log(temp);
 // combination of flat and map methods
 let numberarr = [1, 2, 3, 4,5];
 flatmaparr = [];
-flatmaparr = numberarr.flatMap((ele) => [[ele*3]]);
+flatmaparr = numberarr.flatMap((ele) => [ele*3]);
 console.log(flatmaparr);
 
 // reduce
 let numarr = [2,4,6,8,10];
 let objarr = [{name:'jack',amt:50},{name:'rose',amt:20},{name:'michael',amt:10},{name:'chris',amt:100}]
 reducenumarray = numarr.reduce((firstval,secondval) => (firstval + secondval));
-reduceobjarr = objarr.reduce((firstval,secondval) => (firstval + secondval.amt),0); 
+reduceobjarr = objarr.reduce((firstval,secondval) => (firstval + secondval.amt-1),1); 
 console.log(reducenumarray,"reduce num array");
 console.log(reduceobjarr,"reduce object array")
 
 // reduce right
+let curind = 1;
  numarr = [2,4,6,8,10];
 objarr = [{name:'jack',amt:50},{name:'rose',amt:20},{name:'michael',amt:10},{name:'chris',amt:100}]
 reducenumarray = numarr.reduceRight((firstval,secondval) => (firstval + secondval));
-reduceobjarr = objarr.reduceRight((firstval,secondval) => (firstval + secondval.amt),0); 
+reduceobjarr = objarr.reduceRight(function (firstval,secondval) {
+    firstval + secondval.amt;
+},0); 
 console.log(reducenumarray, "reduceright array");
-console.log(reduceobjarr,"reduce right objectarray")
+console.log(reduceobjarr,"reduce right objectarray");
+
+

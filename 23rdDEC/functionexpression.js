@@ -6,7 +6,7 @@ func1();
 function func1(){
     console.log("function one called!!");
 }
-func2(5,6);
+// func2(5,6);
 var func2 = function (a,b){
     let c = a + b;
     console.log("c",c);
