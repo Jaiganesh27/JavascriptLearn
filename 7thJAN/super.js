@@ -5,7 +5,7 @@ console.log("super class using inheritance");
 
 
 class Pen{
-   static constructor(){
+   constructor(){
       this.refillfull = () =>{
             console.log("pen has been refilled!!");
         }
@@ -15,9 +15,9 @@ class Pen{
         console.log("pen has not been refilled!!");
     }
 
-    static refillhalf = () =>{
-        console.log("pen has been refilled half");
-    }
+    // static refillhalf = () =>{
+    //     console.log("pen has been refilled half");
+    // }
 }
 
 class Box extends Pen{
@@ -34,8 +34,8 @@ class Box extends Pen{
 
 let box1 = new Box('apsara','natraj');
 console.log(box1);
-// box1.isrefillFilled();
-// box1.refillempty();
+box1.isrefillFilled();
+box1.refillempty();
 
 
 

@@ -52,18 +52,17 @@ Offergenerate.prototype.displayoffer = function(){
      console.log(`the offer of the ${this.product} is ${this.offer}`);
    }
 
-Offergenerate.prototype.normalMethod = function () {
-    console.log(`i am normal method i am  over writted`);
-}   
+// Offergenerate.prototype.normalMethod = function () {
+//     console.log(`i am normal method i am  over writted`);
+// }   
 
-console.log("i am class",Offergenerate);
+// console.log("i am class",Offergenerate);
 // Offergenerate.normalMethod();
 let dm = new Offergenerate('Dairy Milk','50%');
 let kk = new Offergenerate('KitKat','55%');
-console.log("ins1",dm);
-dm.normalMethod()
-// console.log(dm);
-// console.log(kk);
+// dm.normalMethod()
+console.log(dm);
+console.log(kk);
 // dm.displayoffer();
 // kk.displayoffer();
 // dm.normalMethod();
