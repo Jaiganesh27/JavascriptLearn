@@ -1,35 +1,66 @@
 // console.log("inheritance");
-function Office(team,time){
+class Office{
+    constructor(team,time){
     this.team = team;
     this.time = time;
-    // this.officestandupmet = () =>{
-    //     console.log(`Hii ${team}, Everyone should join at ${time} Sharp!`);
-    // }
-    // this.officestatusmet = (team,time) =>{
-    //     console.log(`Hii ${team}, Everyone should join at ${time} for status call`);
-    // }
 }
-let mobileTL = new Office('Mobile Team','10 am');
-let webTL = new Office();
-let BackendTL = new Office();
-
-
-Office.prototype.officestandupmet = function () {
+ officestandupmet = function(){
     console.log(`Hii ${this.team}, Everyone should join at ${this.time} Sharp!`);
-} 
-Office.prototype.officestatusmet = function () {
-    console.log(`Hii ${this.team}, Everyone should join at ${this.time} Sharp!`);
-} 
-    
-mobileTL.officestatusmet('Mobile Team','10 am');
-console.log(mobileTL,webTL,BackendTL);
+}
+officestatusmet = function(){
+    console.log(`Hii ${this.team}, Everyone should join at ${this.time} for status call`);
+}
+officemeetend = function(){
+    console.log(`Meting has been ended`);
+}
+}
+class Staff extends Office{
+    constructor(team,time){
+        super();
+        this.team = team;
+        this.time = time; 
+    }
+    arrangeMeeting = function(){
+        this.officestandupmet();
+    }
+}
 
-let javaTL = new Office();
-console.log(javaTL);
+let staff1 = new Staff('Web Team','10am');
+console.log(staff1);
+
+staff1.arrangeMeeting();
+
+class EndMeet extends Staff{
+    constructor(){
+        super();
+    }
+}
+
+let endmeet1 = new EndMeet();
+endmeet1.officemeetend();
 
 
-mobileTL.officestatusmet();
-console.log(mobileTL);
+// prototypical inheritance
 
-let dataTL = Object.create();
-console.log(dataTL);
+function  SuperMarket(vegetables,fruits){
+    this.vegetables = vegetables;
+    this.fruits = fruits;
+}
+SuperMarket.prototype.BulkOrder = function (){
+    console.log("I have Recieved you order Will send soon!");
+    }
+function Hotel(){
+ this.needVegFruits =()=>{
+     this.BulkOrder();
+ }
+ this.receiveFoodOrder = () =>{
+     console.log("We are Received your food ordrr pls wait in queue");
+ }
+ }
+ console.log("hii",Hotel.prototype);
+ Hotel.prototype = Object.create(SuperMarket.prototype);
+ console.log(Hotel.prototype);
+ let eater = new Hotel();
+ eater.receiveFoodOrder();
+ eater.BulkOrder();
+ console.log(eater);
