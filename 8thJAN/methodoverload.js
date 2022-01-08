@@ -1,5 +1,5 @@
 console.log("method overloading in javascript");
-// method overloading is not supporting javascript 
+// method overloading is not supporting javascript it supports overriding
 // it just override the last method as original method
 class Teacher{
     // constructor(){

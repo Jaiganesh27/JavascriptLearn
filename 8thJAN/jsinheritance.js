@@ -64,3 +64,20 @@ function Hotel(){
  eater.receiveFoodOrder();
  eater.BulkOrder();
  console.log(eater);
+ class Student extends Office{
+     constructor(){
+         super();
+     }
+    studentEnroll = () =>{
+        console.log("Hii jaiganesh you have been enrolled!!");
+      this.officemeetend();   
+    } 
+ }
+
+ let student = new Student();
+ student.time = '12am';
+ student.team = 'mobileteam';
+ console.log(student);
+ student.studentEnroll();
+ 
+
