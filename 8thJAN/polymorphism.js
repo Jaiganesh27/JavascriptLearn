@@ -1,10 +1,3 @@
-class Teacher{
-    constructor(){
-        console.log("hii jai");
-    }
-}
-let teaobj = new Teacher();
-console.log(teaobj);
 
 class Dc {
 
