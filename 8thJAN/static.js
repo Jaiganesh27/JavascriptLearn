@@ -29,7 +29,6 @@ class TheaterCounter extends TheaterAdmin{
            this.bookTickets(uname,date,time);
        }, 5000);
     // this.bookTickets();
-
     }
 }
 
@@ -39,6 +38,8 @@ let obj1 = new TheaterCounter('Ramu','8/1/2022','12.18am');
 console.log(obj1);
 obj1.requestTickets();
 // booktickets 
-
+// obj1.verifyRequest();
 // TheaterCounter.bookTickets();
 TheaterCounter.verifyRequest('Ramu','8/1/2022','12.18am');
+console.log(TheaterCounter);
+console.log(TheaterAdmin);

@@ -42,13 +42,25 @@ endmeet1.officemeetend();
 
 // prototypical inheritance
 
-function  SuperMarket(vegetables,fruits){
-    this.vegetables = vegetables;
-    this.fruits = fruits;
+class SuperMarket {
+    constructor(vegetables, fruits) {
+        this.vegetables = vegetables;
+        this.fruits = fruits;
+    }
+    BulkOrder() {
+        console.log("I have Recieved you order Will send soon!");
+    }
+    superOrder(){
+        console.log(" i am super");
+    }
 }
+
 SuperMarket.prototype.BulkOrder = function (){
     console.log("I have Recieved you order Will send soon!");
     }
+SuperMarket.prototype.superOrder = function(){
+    console.log("hii i am super order");
+}
 function Hotel(){
  this.needVegFruits =()=>{
      this.BulkOrder();
@@ -81,3 +93,58 @@ function Hotel(){
  student.studentEnroll();
  
 
+        console.log(SuperMarket.prototype);
+
+
+
+
+//functional inheritance
+var mammal = function(spec) {
+
+    var that = {};
+
+    that.get_name = function() {
+
+        return spec.name;
+
+    };
+
+    that.says = function() {
+        return spec.saying || '';
+    };
+
+    return that;
+}
+
+var cat = function(spec) {
+
+    spec.saying = spec.saying || 'meow';
+    var that = mammal(spec);
+    that.purr = function(n) {
+
+        var i, s = '';
+
+        for (i = 0; i < n; i++) {
+
+            if (s) {
+                s += '-';
+            }
+            s += 'r';
+        }
+
+        return s;
+    };
+    that.get_name = function() {
+        return that.says() + ' ' + spec.name + ' ' + that.says();
+    };
+    return that;
+
+}
+
+var myMammal = mammal({name: 'Herb'});
+var myCat = cat({name: 'Fiona'});
+    myCat.get_name(); // "meow Fiona meow"
+    myCat.purr(5); // "r-r-r-r-r" 
+
+
+//psuedoclassical inheritance is also same as  

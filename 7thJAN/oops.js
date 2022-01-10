@@ -45,6 +45,7 @@ function Offergenerate(product,offer){
    this.normalMethod = function(){
        console.log(`I am normal method using constructor function`);
    }
+   this.displayoffer = f
 }
 
 // method created using prototype 
@@ -89,4 +90,6 @@ kk.normalMethod();
 
 let obj3 = new Offergenerate();
 console.log('dffsdff');
-obj3.__proto__.normalMethod();
+// obj3.__proto__.normalMethod();
+
+console.log(Offergenerate.prototype);
