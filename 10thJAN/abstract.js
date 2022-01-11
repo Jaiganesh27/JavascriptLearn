@@ -20,4 +20,8 @@ this.empName = fullName;
 //Created an object of subclass (extending abstract class)
 Manager.prototype=Object.create(Employee.prototype);
 var mang=new Manager("Aniket Davda");
-console.log(mang.display());
+// console.log(mang.display());
+console.log(mang);
+mang.empName = "jaiganesh";
+mang.display();
+console.log(mang);

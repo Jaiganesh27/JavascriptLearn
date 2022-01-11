@@ -29,7 +29,6 @@ console.log(wallet);
 // JSON is quicker to read and write
 // JSON can use arrays
 // func = eval(wallet.visitcard);
-// console.log(eval(func));
 // In JSON, functions are not allowed as object values.
 // The JSON.stringify() function will remove any functions from a JavaScript object, both the key and the value:
 // json array
@@ -49,6 +48,6 @@ console.log(console.log(wallet.date.toString()));
 
 
 // srcfile = './dummy.json';
-let obj = JSON.parse(dummy);
-console.log(obj);
-// javascript - variables, arrays methods functionstypes , prototypes , oops,json 
+// let obj = JSON.parse(dummy);
+// console.log(obj);
+ 

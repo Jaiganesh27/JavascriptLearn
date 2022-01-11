@@ -416,3 +416,4 @@ obj = [
          filterarr =obj.filter((ele) => ele.Gender == 1);
     console.log(filterarr);
 
+         
