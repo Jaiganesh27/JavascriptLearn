@@ -91,3 +91,11 @@ jsonobjectparse.forEach(ele => {
 });
 
 console.log(arrfilter);
+
+
+// check who area all passes in particular semester
+for(let i in value){
+	EmployeesDetailsList.employee[i].department.semesters.filter((element) =>{
+		console.log(element);
+	});
+	  }

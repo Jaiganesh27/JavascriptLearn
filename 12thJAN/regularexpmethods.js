@@ -16,7 +16,7 @@ console.log(result);
 result = str.search(regex);  //it will search and return first match index value
 console.log(result);
 result = str.replace(regex,'HIII'); //it will replace first caught element with new value like find adn replace
-console.log(result);
+console.log(result);     
 result = str.replaceAll(regex,'5000'); //it wil replace all the matches in a sttring
 console.log(result);
 result = regex.exec(str);  // it will return first match string in an array with groups index(capturegrpreturn)
