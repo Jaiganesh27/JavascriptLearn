@@ -1,4 +1,4 @@
-var jsonObj = [
+var jsonObj = `[
 	{
 		"id": "0001",
 		"type": "donut",
@@ -67,15 +67,16 @@ var jsonObj = [
 				{ "id": "5004", "type": "Maple" }
 			]
 	}
-]
-
+]`
+let jsonobjectparse  = JSON.parse(jsonObj);
+console.log(jsonobjectparse);
 // console.log(jsonObj);
-console.log(jsonObj[0].batters);
-console.log(jsonObj[2].batters.batter[0].type);
-console.log(jsonObj[0].batters.batter[0].id," - ",jsonObj[0].batters.batter[0].type);
+console.log(jsonobjectparse[0].batters);
+console.log(jsonobjectparse[2].batters.batter[0].type);
+console.log(jsonobjectparse[0].batters.batter[0].id," - ",jsonobjectparse[0].batters.batter[0].type);
 
 let arrfilter = []; 
-jsonObj.forEach(ele => {
+jsonobjectparse.forEach(ele => {
 	// console.log(ele.topping);
 	ele.topping.forEach(val => {
 		// console.log(val);
