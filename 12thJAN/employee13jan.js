@@ -477,6 +477,7 @@ function getSemesterSubjectWiseMarks(empid,depid,semno){
             //   if(ele.departmentId == depid && semno == 'semester1') 
             //    return ele.;
             if(ele.departmentId == depid){
+                if(semno){
                 switch(semno){
                     case 1:
                         semesterDetails.push(ele.semester1);
@@ -485,7 +486,7 @@ function getSemesterSubjectWiseMarks(empid,depid,semno){
                         semesterDetails.push(ele.semester2);
                         break;
                     case 3:
-                        semesterDetails.push(ele.semester3); 
+                        semesterDe,tails.push(ele.semester3); 
                         break; 
                     case 4:
                         semesterDetails.push(ele.semester4);
@@ -501,13 +502,21 @@ function getSemesterSubjectWiseMarks(empid,depid,semno){
             
                     }
             }
+            else{
+                semesterDetails.push(ele.semester1,ele.semester2,ele.semester3,
+                    ele.semester4,ele.semester5,ele.semester6);
+             console.log("i am else block");
+            }
+        }
+        
 
          })
      }
   })
-console.log(semesterDetails);
+console.log("hii",semesterDetails);
 }
+//get semester of one employee  third param is optional '' means all sem data or 1-6 given particular sem data.
+getSemesterSubjectWiseMarks('0001','dep1','');
 getSemesterSubjectWiseMarks('0001','dep1',5);
-
 
 // pending semester details 
