@@ -42,91 +42,91 @@ let employeeData = {
                 ],
                 "semester2":[
                    {
-                      "subject":"cPrograming",
-                      "marks":70
+                      "subject":"c++Programing",
+                      "marks":67
                    },
                    {
-                      "subject":"operatingSystem",
-                      "marks":55
+                      "subject":"oS",
+                      "marks":45
                    },
                    {
-                      "subject":"englishPaper1",
-                      "marks":43
+                      "subject":"englishPaper2",
+                      "marks":87
                    },
                    {
-                      "subject":"tamilPaper1",
-                      "marks":90
+                      "subject":"tamilPaper2",
+                      "marks":98
                    }
                 ],
                 "semester3":[
                    {
-                      "subject":"cPrograming",
-                      "marks":70
-                   },
-                   {
-                      "subject":"operatingSystem",
-                      "marks":55
-                   },
-                   {
-                      "subject":"englishPaper1",
-                      "marks":43
-                   },
-                   {
-                      "subject":"tamilPaper1",
+                      "subject":"java",
                       "marks":90
+                   },
+                   {
+                      "subject":"botany",
+                      "marks":45
+                   },
+                   {
+                      "subject":"englishPaper3",
+                      "marks":97
+                   },
+                   {
+                      "subject":"tamilPaper3",
+                      "marks":67
                    }
                 ],
                 "semester4":[
                    {
-                      "subject":"cPrograming",
+                      "subject":"algorithms",
                       "marks":70
                    },
                    {
-                      "subject":"operatingSystem",
-                      "marks":55
+                      "subject":"datastructures",
+                      "marks":65
                    },
                    {
-                      "subject":"englishPaper1",
-                      "marks":43
+                      "subject":"englishPaper4",
+                      "marks":65
                    },
                    {
-                      "subject":"tamilPaper1",
-                      "marks":90
+                      "subject":"tamilPaper4",
+                      "marks":34
                    }
                 ],
                 "semester5":[
                    {
-                      "subject":"cPrograming",
-                      "marks":70
-                   },
-                   {
-                      "subject":"operatingSystem",
-                      "marks":55
-                   },
-                   {
-                      "subject":"englishPaper1",
+                      "subject":"history",
                       "marks":43
                    },
                    {
-                      "subject":"tamilPaper1",
+                      "subject":"commerce",
+                      "marks":55
+                   },
+                   {
+                      "subject":"englishPaper5",
+                      "marks":43
+                   },
+                   {
+                      "subject":"tamilPaper5",
                       "marks":90
                    }
                 ],
                 "semester6":[
                    {
-                      "subject":"cPrograming",
+                      "subject":"dbms",
                       "marks":70
                    },
                    {
-                      "subject":"operatingSystem",
+                      "subject":"javascript",
                       "marks":55
                    },
                    {
-                      "subject":"englishPaper1",
+                      "subject":"englishPaper6",
                       "marks":43
                    },
                    {
-                      "subject":"tamilPaper1",
+                      "subject":"tamilPaper6",
                       "marks":90
                    }
                 ]
@@ -187,9 +187,6 @@ let employeeData = {
 
 
 function addEmployee(empid,empname,empage,empmobile,empemail,empaddresses,empdepartment){
-
-      
-
     const employeeFullTemplate = {
         empId: null,
         empName: null,
@@ -281,7 +278,7 @@ function deleteEmployee(empid){
      employeeData.employees.forEach((element,index) => {
         if(element.empId = empid)
             employeeData.employees.splice(index,1); 
-            temp  =true;
+            temp  = true;
      }); 
      if(temp)
          console.log("Employeee Deletion Successful!");
@@ -296,9 +293,13 @@ function deleteEmployee(empid){
 function addAdditionalAddressToEmployee(empid,addId,door,street,city,landMark,state,country,pinCode){
     let newAddress = addNewEmpAddress(addId,door,street,city,landMark,state,country,pinCode);
     console.log(newAddress);
+    // obj ={ 
+    //      empId : empid,
+    // }
     let isFound =[];
    employeeData.employees.forEach((element) =>{
             if(element.empId == empid){
+                // console.log("hii i am if block");
                isFound = element.addresses.filter((ele) =>{
                    return ele.addressId == addId
                 });
@@ -309,6 +310,7 @@ function addAdditionalAddressToEmployee(empid,addId,door,street,city,landMark,st
     employeeData.employees.forEach((element) =>{
         if(element.empId == empid){
             element.addresses.push(newAddress);  
+            // console.log("hii i am if block");
             console.log("employee Address added!");
         }
      })
@@ -324,6 +326,7 @@ function deleteAddressForEmployee(empid,addressid) {
     employeeData.employees.forEach((element) =>{
         if(element.empId == empid)
         {
+            // console.log("hiiif block");
                 element.addresses.forEach((ele,index) =>{
                 if(ele.addressId == addressid)
                 {
@@ -352,6 +355,7 @@ function updateAddress(empid,addressid,door,street,city,landMark,state,country,p
                     element.addresses.forEach((ele,index) =>{
                     if(ele.addressId == addressid)
                     {
+                        console.log("hii i am if block")
                        element.addresses.splice(index,1);
                        element.addresses.push(newAddress);  
                        temp = true;
@@ -369,17 +373,18 @@ function updateAddress(empid,addressid,door,street,city,landMark,state,country,p
 // checking address operations
 updateAddress('0003','add2','100/304','kumar street','velachery','church opp','kerala','india',600700);
 addAdditionalAddressToEmployee('0003','add1','15/7','raja street','mylapore','school opp','tn','india',600700);
-updateAddress('0003','add2','400/1','raja street','mylapore','school opp','tn','india',600700);
+// updateAddress('0003','add2','400/1','raja street','mylapore','school opp','tn','india',600700);
 
 
 // get address with and without address id
 function getAddressOfEmployee(empid,addid){
     let address,temp;
- employeeData.employees.map((element)=>{
+ employeeData.employees.forEach((element)=>{
      if (element.empId == empid){
       if(addid){
           address = element.addresses.filter((ele)=>{
               if(ele.addressId == addid)
+              console.log("hii i am if block")
               return ele; 
           });
       }
@@ -459,12 +464,50 @@ console.log("Employee not Found! / Employee Department Duplicate!");
 addOrUpdateDepartmentForEmployeeWithoutSemester('0001','dep5','commerce','NEW');
 // employee department update
 addOrUpdateDepartmentForEmployeeWithoutSemester('0001','dep5','biograpy','UPDATE');
-// employee department delete (nede to pass 3 param because of single function for update add  delete)
+// employee department delete (need to pass 3 param because of single function for update add  delete)
 addOrUpdateDepartmentForEmployeeWithoutSemester('0001','dep5','','DELETE');
 
 
 // Semester Marks Manipulations
-Semester
+function getSemesterSubjectWiseMarks(empid,depid,semno){
+ let semesterDetails = [];
+    employeeData.employees.forEach((element)=>{
+     if(element.empId == empid){
+         element.department.forEach((ele,index)=>{
+            //   if(ele.departmentId == depid && semno == 'semester1') 
+            //    return ele.;
+            if(ele.departmentId == depid){
+                switch(semno){
+                    case 1:
+                        semesterDetails.push(ele.semester1);
+                        break;
+                    case 2:
+                        semesterDetails.push(ele.semester2);
+                        break;
+                    case 3:
+                        semesterDetails.push(ele.semester3); 
+                        break; 
+                    case 4:
+                        semesterDetails.push(ele.semester4);
+                        break;
+                    case 5:
+                        semesterDetails.push(ele.semester5);
+                        break;
+                    case 6:
+                        semesterDetails.push(ele.semester6);   
+                        break;
+                    default:
+                        console.log("No semester matched!");
+            
+                    }
+            }
+
+         })
+     }
+  })
+console.log(semesterDetails);
+}
+getSemesterSubjectWiseMarks('0001','dep1',5);
 
 
-
+// pending semester details 
