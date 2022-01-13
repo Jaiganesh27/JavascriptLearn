@@ -520,3 +520,4 @@ getSemesterSubjectWiseMarks('0001','dep1','');
 getSemesterSubjectWiseMarks('0001','dep1',5);
 
 // pending semester details 
+// creating new semester details , update semester details .  
