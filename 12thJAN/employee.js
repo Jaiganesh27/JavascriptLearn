@@ -216,13 +216,14 @@ console.log(TomAddresses);
 
 //address template
 const addressTemplate = {
-    doorNo:null,
-    street:"",
-    city:"",
-    landMark:"",
-    state:"",
-    country:"",
-    pinCode: null
+    addressId:Number,
+    doorNo:Number,
+    street:String,
+    city:String,
+    landMark:String,
+    state:String,
+    country:String,
+    pinCode: Number
 } 
 console.log(addressTemplate);
 
@@ -466,4 +467,22 @@ for(let sub in mickeySemester){
 
 // console table format
 console.table(mickeySemester);
+// 13/1/2022 - starts
 
+
+//// check who area all passes in particular semester
+
+for(i =0;i<EmployeesDetailsList.employee.length;i++){
+for(let j of EmployeesDetailsList.employee[i].department.semesters){
+   console.log(j);
+}
+}
+
+
+// sem --> sub add
+// sem wise sub wise mark add update
+// emp depart which sem which sub,mark -->func
+
+// department details add update
+// address add update 
+// employee details add update
