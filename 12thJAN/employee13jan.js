@@ -519,5 +519,267 @@ console.log("hii",semesterDetails);
 getSemesterSubjectWiseMarks('0001','dep1','');
 getSemesterSubjectWiseMarks('0001','dep1',5);
 
+
+
+// monday 17/1/2022 starts
 // pending semester details 
 // creating new semester details , update semester details .  
+
+function addSemesterMarksForEmployee(empid,depid,semno,action,sub,mark){
+  let  tempObj = addNewEmpSemester(sub,mark);
+   let findArr = [];
+   let addSuccess = false,updateSuccess = false,deleteSuccess = false;
+    employeeData.employees.forEach((element)=>{
+     if(element.empId == empid){
+         element.department.forEach((ele,index)=>{
+            //   if(ele.departmentId == depid && semno == 'semester1') 
+            //    return ele.;
+            if(ele.departmentId == depid){
+                if(semno){
+                switch(semno){
+                    case 1:{
+                     ele.semester1.forEach((element)=>{
+                        if(action == 'NEW'){
+                           findArr = ele.semester1.filter((elem)=>{
+                              return elem.subject == sub;
+                           })
+                        //    if(element.subject == sub){
+                        //      console.log("Subject Already Present Please Try for new Subject!");
+                        //      return ;
+                        //    }
+                        //    else{
+                        //    ele.semester1.push(tempObj);
+                        //    console.log("Subject Added Successfully!");
+                        //    addSuccess = true;
+                        //    return;
+                        //    }
+                     }
+                     else if(action == 'UPDATE'){
+                        if(element.subject == sub){
+                         element.marks = mark;
+                         updateSuccess = true;
+                         console.log("Update done block!");
+                        }                         
+                     }
+                  else if(action == 'DELETE'){
+                     if(element.subject == sub){
+                        ele.semester1.splice(index,1);
+                      deleteSuccess = true;
+                      console.log("delete done block!");
+                     }  
+                  }
+                  else
+                  console.log("Wrong Action found!");
+               })
+                 if(findArr.length == 0){
+                    console.log(findArr);
+                    ele.semester1.push(tempObj);
+                    console.log("Subject Added Successfully!");
+                    addSuccess = true;
+                 }
+                 else
+                 console.log("Subject is Duplicate!");
+                           }
+                        break;
+                    case 2:
+                     {
+                        ele.semester2.forEach((element)=>{
+                           if(action == 'NEW'){
+                              findArr = ele.semester2.filter((elem)=>{
+                                 return elem.subject == sub;
+                              })
+                        }
+                        else if(action == 'UPDATE'){
+                           if(element.subject == sub){
+                            element.marks = mark;
+                            updateSuccess = true;
+                            console.log("Update done block!");
+                           }                         
+                        }
+                     else if(action == 'DELETE'){
+                        if(element.subject == sub){
+                           ele.semester2.splice(index,1);
+                         deleteSuccess = true;
+                         console.log("delete done block!");
+                        }  
+                     }
+                     else
+                     console.log("Wrong Action found!");
+                  })
+                    if(findArr.length == 0){
+                       console.log(findArr);
+                       ele.semester2.push(tempObj);
+                       console.log("Subject Added Successfully!");
+                       addSuccess = true;
+                    }
+                    else
+                    console.log("Subject is Duplicate!");
+                              }
+                        break;
+                    case 3:
+                     {
+                        ele.semester3.forEach((element)=>{
+                           if(action == 'NEW'){
+                              findArr = ele.semester3.filter((elem)=>{
+                                 return elem.subject == sub;
+                              })
+               
+                        }
+                        else if(action == 'UPDATE'){
+                           if(element.subject == sub){
+                            element.marks = mark;
+                            updateSuccess = true;
+                            console.log("Update done block!");
+                           }                         
+                        }
+                     else if(action == 'DELETE'){
+                        if(element.subject == sub){
+                           ele.semester3.splice(index,1);
+                         deleteSuccess = true;
+                         console.log("delete done block!");
+                        }  
+                     }
+                     else
+                     console.log("Wrong Action found!");
+                  })
+                    if(findArr.length == 0){
+                       console.log(findArr);
+                       ele.semester3.push(tempObj);
+                       console.log("Subject Added Successfully!");
+                       addSuccess = true;
+                    }
+                    else
+                    console.log("Subject is Duplicate!");
+                              } 
+                        break; 
+                    case 4:
+                     {
+                        ele.semester4.forEach((element)=>{
+                           if(action == 'NEW'){
+                              findArr = ele.semester4.filter((elem)=>{
+                                 return elem.subject == sub;
+                              })
+                          
+                        }
+                        else if(action == 'UPDATE'){
+                           if(element.subject == sub){
+                            element.marks = mark;
+                            updateSuccess = true;
+                            console.log("Update done block!");
+                           }                         
+                        }
+                     else if(action == 'DELETE'){
+                        if(element.subject == sub){
+                           ele.semester4.splice(index,1);
+                         deleteSuccess = true;
+                         console.log("delete done block!");
+                        }  
+                     }
+                     else
+                     console.log("Wrong Action found!");
+                  })
+                    if(findArr.length == 0){
+                       console.log(findArr);
+                       ele.semester4.push(tempObj);
+                       console.log("Subject Added Successfully!");
+                       addSuccess = true;
+                    }
+                    else
+                    console.log("Subject is Duplicate!");
+                              }
+                        break;
+                    case 5:
+                     {
+                        ele.semester5.forEach((element)=>{
+                           if(action == 'NEW'){
+                              findArr = ele.semester5.filter((elem)=>{
+                                 return elem.subject == sub;
+                              })
+                  
+                        }
+                        else if(action == 'UPDATE'){
+                           if(element.subject == sub){
+                            element.marks = mark;
+                            updateSuccess = true;
+                            console.log("Update done block!");
+                           }                         
+                        }
+                     else if(action == 'DELETE'){
+                        if(element.subject == sub){
+                           ele.semester5.splice(index,1);
+                         deleteSuccess = true;
+                         console.log("delete done block!");
+                        }  
+                     }
+                     else
+                     console.log("Wrong Action found!");
+                  })
+                    if(findArr.length == 0){
+                       console.log(findArr);
+                       ele.semester5.push(tempObj);
+                       console.log("Subject Added Successfully!");
+                       addSuccess = true;
+                    }
+                    else
+                    console.log("Subject is Duplicate!");
+                              }
+                        break;
+                    case 6:
+                     {
+                        ele.semester6.forEach((element)=>{
+                           if(action == 'NEW'){
+                              findArr = ele.semester6.filter((elem)=>{
+                                 return elem.subject == sub;
+                              })
+                          
+                        }
+                        else if(action == 'UPDATE'){
+                           if(element.subject == sub){
+                            element.marks = mark;
+                            updateSuccess = true;
+                            console.log("Update done block!");
+                           }                         
+                        }
+                     else if(action == 'DELETE'){
+                        if(element.subject == sub){
+                           ele.semester6.splice(index,1);
+                         deleteSuccess = true;
+                         console.log("delete done block!");
+                        }  
+                     }
+                     else
+                     console.log("Wrong Action found!");
+                  })
+                    if(findArr.length == 0){
+                       console.log(findArr);
+                       ele.semester6.push(tempObj);
+                       console.log("Subject Added Successfully!");
+                       addSuccess = true;
+                    }
+                    else
+                    console.log("Subject is Duplicate!");
+                              }   
+                        break;
+                    default:
+                        console.log("No semester matched!");
+            
+                    }
+            }
+            else{
+             console.log("Semester no not found!");
+            }
+        }
+         })
+     }
+  })
+
+  if(addSuccess||updateSuccess||deleteSuccess)
+    console.log("Executed Successfully!");
+    else
+     console.log("Try again with proper values");
+}
+addSemesterMarksForEmployee('0001','dep1',2,'NEW','operatingSystem',68);
+
+
+
+
