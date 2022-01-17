@@ -132,8 +132,9 @@ function updateOrAssignDefault(element,reName,rePrice,reQuantity){
     element.quantity = reQuantity?reQuantity:element.quantity;
 }
 
-function updateOrDeleteProduct(action,productID,type,catagory,subcat,reName,rePrice,reQuantity){
+function updateOrDeleteProduct(action,productID,type,catagory,subcat,reName,rePrice,reQuantity,quan){
     // console.log(catagory);
+    CartData = [];
   if(type == 'food')
 {
 
@@ -144,7 +145,17 @@ function updateOrDeleteProduct(action,productID,type,catagory,subcat,reName,rePr
               if(element.productId == productID){
                   if(action == 'DELETE')
                   store.food.vegCatagory.vegetables.splice(index,1);
-                  else{
+                  else if(action == 'BUY'){
+                      if(element.productQuantity - quan > 0){
+                    CartData = product(element.productName,element.productPrice,element.quantity);
+                    element.productQuantity = element.productQuantity - quan;
+                    return CartData;
+                      }
+                      else
+                       console.log("Product is Empty Or not Enough!!!!");
+                  }  
+                  else
+                  {
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   }  
             }
@@ -281,3 +292,23 @@ console.log("Hii Jaiganesh");
 
 
 
+function addItemToCart(action,productID,type,catagory,subcat,quantity){
+      updateOrDeleteProduct(action,productID,type,catagory,subcat,'','','',quantity);       
+}
+addItemToCart('BUY','0004',"food","vegCatagory","vegetables",5);
+
+
+
+function productAddtoCart(proname,proprice,proquan,total){
+productList = {
+     productName : null,
+     productPrice :null,
+     productQuantity:null,
+     totalPrice:null
+}
+productList.totalPrice = element.quantity * element.productPrice;
+productList.productName = proname;
+productList.productPrice = proprice;
+productList.productQuantity = proquan;
+return productList;
+}
