@@ -146,13 +146,12 @@ function updateOrDeleteProduct(action,productID,type,catagory,subcat,reName,rePr
                   if(action == 'DELETE')
                   store.food.vegCatagory.vegetables.splice(index,1);
                   else if(action == 'BUY'){
-                      if(element.productQuantity - quan > 0){
-                    CartData = product(element.productName,element.productPrice,element.quantity);
-                    element.productQuantity = element.productQuantity - quan;
-                    return CartData;
+                      if((element.quantity - quan) >= 0){
+                    CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                    element.quantity = element.quantity - quan;
                       }
                       else
-                       console.log("Product is Empty Or not Enough!!!!");
+                       console.log("Product is not InStock!!!!");
                   }  
                   else
                   {
@@ -166,6 +165,14 @@ function updateOrDeleteProduct(action,productID,type,catagory,subcat,reName,rePr
             if(element.productId == productID){
                 if(action == 'DELETE')
                 store.food.vegCatagory.fruits.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   }    
@@ -186,6 +193,14 @@ else if(catagory == 'nonVegCatagory')
               if(element.productId == productID){
                 if(action == 'DELETE')
                 store.food.nonVegCatagory.ground.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -197,6 +212,14 @@ else if(catagory == 'nonVegCatagory')
             if(element.productId == productID){
                 if(action == 'DELETE')
                 store.food.nonVegCatagory.sea.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -214,6 +237,14 @@ else if(catagory == 'nonVegCatagory')
             if(element.productId == productID){
                 if(action == 'DELETE')
                 store.food.groceries.kitchen.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -229,6 +260,14 @@ else if(type == 'fancy'){
               if(element.productId == productID){
                   if(action == 'DELETE')
               store.fancy.dress.mendress.splice(index,1);
+              else if(action == 'BUY'){
+                if((element.quantity - quan) >= 0){
+              CartData = productAddtoCart(element.productName,element.productPrice,quan);
+              element.quantity = element.quantity - quan;
+                }
+                else
+                 console.log("Product is Empty Or not Enough!!!!");
+            }
               else{
                 updateOrAssignDefault(element,reName,rePrice,reQuantity);
               } 
@@ -240,6 +279,14 @@ else if(type == 'fancy'){
             if(element.productId == productID){
                 if(action == 'DELETE')
                 store.fancy.dress.womenDress.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -254,6 +301,14 @@ else if(type == 'fancy'){
               if(element.productId == productID){
                 if(action == 'DELETE')
                 store.fancy.cosmetics.perfumes.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -265,6 +320,14 @@ else if(type == 'fancy'){
             if(element.productId == productID){
                 if(action == 'DELETE')
                 store.fancy.cosmetics.womens.splice(index,1);
+                else if(action == 'BUY'){
+                    if((element.quantity - quan) >= 0){
+                  CartData = productAddtoCart(element.productName,element.productPrice,quan);
+                  element.quantity = element.quantity - quan;
+                    }
+                    else
+                     console.log("Product is Empty Or not Enough!!!!");
+                }
                 else{
                     updateOrAssignDefault(element,reName,rePrice,reQuantity);
                   } 
@@ -280,35 +343,37 @@ else if(type == 'fancy'){
 else{
     console.log("We are not have this catagory field please chooose food/cosmetics only!");
 }
+if(action == 'BUY')
+return CartData
 }
 // action & proid & protype & procat & prosubcat (optional was proname & proprice & proquantity) = params
-updateOrDeleteProduct('UPDATE','0003',"food","vegCatagory","vegetables",'Onion','80',35);
+updateOrDeleteProduct('UPDATE','0003',"food","vegCatagory","vegetables",'Onion',80,25);
 updateOrDeleteProduct('DELETE','0004',"food","vegCatagory","vegetables");
 
 
 // user buying 
-console.log("Hii Jaiganesh");
 
-
+function productAddtoCart(proname,proprice,proquan){
+    productList = {
+         productName : null,
+         productPrice :null,
+         productQuantity:null,
+         totalPrice:null
+    }
+    productList.totalPrice = proquan * proprice;
+    productList.productName = proname;
+    productList.productPrice = proprice;
+    productList.productQuantity = proquan;
+    return productList;
+    }
 
 
 function addItemToCart(action,productID,type,catagory,subcat,quantity){
-      updateOrDeleteProduct(action,productID,type,catagory,subcat,'','','',quantity);       
+    let CartData ;   
+   CartData = updateOrDeleteProduct(action,productID,type,catagory,subcat,'','','',quantity);    
+   console.table(CartData);   
 }
-addItemToCart('BUY','0004',"food","vegCatagory","vegetables",5);
+addItemToCart('BUY','0005',"food","vegCatagory","vegetables",9);
+addItemToCart('BUY','0005',"food","vegCatagory","vegetables",1);
+addItemToCart('BUY','0005',"food","vegCatagory","vegetables",1);
 
-
-
-function productAddtoCart(proname,proprice,proquan,total){
-productList = {
-     productName : null,
-     productPrice :null,
-     productQuantity:null,
-     totalPrice:null
-}
-productList.totalPrice = element.quantity * element.productPrice;
-productList.productName = proname;
-productList.productPrice = proprice;
-productList.productQuantity = proquan;
-return productList;
-}
