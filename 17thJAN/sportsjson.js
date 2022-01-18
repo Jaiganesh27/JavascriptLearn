@@ -55,3 +55,18 @@ cricket = {
 
     ]
 }
+console.log(cricket);
+
+
+// teams add update delete
+// playing 11 add , update ,delete
+// tropies add update delete
+// player individual achievement add update delete
+
+// show playing 11 of a teams
+// show captains of all teams
+// show youngest captain and older captain
+// show most tryphy team
+// show most achievable player in a one team
+// show team name , own ground and head coach of all teams.
+// show recent trophy of the one teams.
