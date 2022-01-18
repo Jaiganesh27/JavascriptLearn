@@ -57,12 +57,13 @@ cricket = {
 }
 console.log(cricket);
 
-
+// ADD,UPDATE,DELETE
 // teams add update delete
 // playing 11 add , update ,delete
 // tropies add update delete
 // player individual achievement add update delete
 
+// GET 
 // show playing 11 of a teams
 // show captains of all teams
 // show youngest captain and older captain
