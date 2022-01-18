@@ -1,128 +1,166 @@
 cricket = {
-    teams:[
-        {
-           teamName:"Australia",
-           ownGround:"sydney",
-           ranking:2,
-           coach:{
-               batCoach:"rickyponting",
-               bowlCoach:"symonds",
-               headCoach:"mike hussey",
-            },
-           playing11:[
-               {
-                 captain:true,
-                 playerName : "SteveSmith",
-                 age:"30",
-                 playerType:"Batsman",
-                 acheivements:[{
-                     achievementName:"worldcup50",
-                     year:"2015",
-                 }]
-
-               },
-               {
-                captain:false,
-                playerName : "Mitchell Starc",
-                age:"31",
-                playerType:"Bowler",
-                acheivements:[{
-                    achievementName:"worldcup50",
-                    year:"2015",
-                }]
-
-              }
-        ],
-            trophies:[
-                {trophyName:"worldcup50",year:"2015",opponent:"NewZealand"},
-                {trophyName:"worldcup20",year:"2021",opponent:"NewZealand"},
-                {trophyName:"worldcup50",year:"2007",opponent:"India"},
-                {trophyName:"worldcup50",year:"2003",opponent:"Pakistan"}
-            ]
-
-        },
-        {
-            teamName:"India",
-            ownGround:"Chennai",
-            ranking:1,
-            coach:{
-                batCoach:"SachinTendulkar",
-                bowlCoach:"Nehra",
-                headCoach:"MSDhoni",
+    "teams":[
+       {
+          "teamName":"Australia",
+          "ownGround":"sydney",
+          "ranking":2,
+          "coach":{
+             "batCoach":"rickyponting",
+             "bowlCoach":"symonds",
+             "headCoach":"mike hussey"
+          },
+          "playing11":[
+             {
+                "captain":true,
+                "playerName":"SteveSmith",
+                "age":"30",
+                "playerType":"Batsman",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup50",
+                      "year":"2015"
+                   }
+                ]
              },
-            playing11:[
-                {
-                  captain:true,
-                  playerName : "Virat Kohli",
-                  age:"31",
-                  playerType:"Batsman",
-                  acheivements:[{
-                      achievementName:"worldcup50",
-                      year:"2011",
-                  }]
- 
-                },
-                {
-                    captain:false,
-                    playerName : "Ravindra Jadeja",
-                    age:"30",
-                    playerType:"AllRounder",
-                    acheivements:[{
-                        achievementName:"worldcup20",
-                        year:"2007",
-                    }]
-   
-                  }
-         ],
-             trophies:[
-                 {trophyName:"worldcup50",year:"2011",opponent:"SriLanka"},
-                 {trophyName:"worldcup20",year:"2007",opponent:"Pakistan"},
-                 {trophyName:"worldcupCtrophy",year:"2013",opponent:"England"}
-             ]
- 
-         },
-         {
-            teamName:"England",
-            ownGround:"London",
-            ranking:3,
-            coach:{
-                batCoach:"Strauss",
-                bowlCoach:"Broad",
-                headCoach:"Vaghen",
+             {
+                "captain":false,
+                "playerName":"Mitchell Starc",
+                "age":"31",
+                "playerType":"Bowler",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup50",
+                      "year":"2015"
+                   }
+                ]
+             }
+          ],
+          "trophies":[
+             {
+                "trophyName":"worldcup50",
+                "year":"2015",
+                "opponent":"NewZealand"
              },
-            playing11:[
-                {
-                  captain:true,
-                  playerName : "Joe Root",
-                  age:"29",
-                  playerType:"Batsman",
-                  acheivements:[{
-                      achievementName:"worldcup50",
-                      year:"2019",
-                  }]
- 
-                },
-                {
-                    captain:false,
-                    playerName : "Sam Curran",
-                    age:"25",
-                    playerType:"AllRounder",
-                    acheivements:[{
-                        achievementName:"worldcup50",
-                        year:"2019",
-                    }]
-   
-                  }
-         ],
-             trophies:[
-                 {trophyName:"worldcup50",year:"2019",opponent:"NewZealand"},
-                 {trophyName:"worldcup20",year:"2009",opponent:"Pakistan"}
-             ]
- 
-         }
-
+             {
+                "trophyName":"worldcup20",
+                "year":"2021",
+                "opponent":"NewZealand"
+             },
+             {
+                "trophyName":"worldcup50",
+                "year":"2007",
+                "opponent":"India"
+             },
+             {
+                "trophyName":"worldcup50",
+                "year":"2003",
+                "opponent":"Pakistan"
+             }
+          ]
+       },
+       {
+          "teamName":"India",
+          "ownGround":"Chennai",
+          "ranking":1,
+          "coach":{
+             "batCoach":"SachinTendulkar",
+             "bowlCoach":"Nehra",
+             "headCoach":"MSDhoni"
+          },
+          "playing11":[
+             {
+                "captain":true,
+                "playerName":"Virat Kohli",
+                "age":"31",
+                "playerType":"Batsman",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup50",
+                      "year":"2011"
+                   }
+                ]
+             },
+             {
+                "captain":false,
+                "playerName":"Ravindra Jadeja",
+                "age":"30",
+                "playerType":"AllRounder",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup20",
+                      "year":"2007"
+                   }
+                ]
+             }
+          ],
+          "trophies":[
+             {
+                "trophyName":"worldcup50",
+                "year":"2011",
+                "opponent":"SriLanka"
+             },
+             {
+                "trophyName":"worldcup20",
+                "year":"2007",
+                "opponent":"Pakistan"
+             },
+             {
+                "trophyName":"worldcupCtrophy",
+                "year":"2013",
+                "opponent":"England"
+             }
+          ]
+       },
+       {
+          "teamName":"England",
+          "ownGround":"London",
+          "ranking":3,
+          "coach":{
+             "batCoach":"Strauss",
+             "bowlCoach":"Broad",
+             "headCoach":"Vaghen"
+          },
+          "playing11":[
+             {
+                "captain":true,
+                "playerName":"Joe Root",
+                "age":"29",
+                "playerType":"Batsman",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup50",
+                      "year":"2019"
+                   }
+                ]
+             },
+             {
+                "captain":false,
+                "playerName":"Sam Curran",
+                "age":"25",
+                "playerType":"AllRounder",
+                "acheivements":[
+                   {
+                      "achievementName":"worldcup50",
+                      "year":"2019"
+                   }
+                ]
+             }
+          ],
+          "trophies":[
+             {
+                "trophyName":"worldcup50",
+                "year":"2019",
+                "opponent":"NewZealand"
+             },
+             {
+                "trophyName":"worldcup20",
+                "year":"2009",
+                "opponent":"Pakistan"
+             }
+          ]
+       }
     ]
-}
+ }
 console.log(cricket);
 
 
@@ -264,11 +302,78 @@ function addPlayerIntoTeam(team,cap,playname,playage,playtype,playachieve){
     }
    })
 }
-function addTrophy(){
 
+function addWholeTeam(Tname,TOGround,Trank,Tcoach,Tplay11,Ttrophy){
+    let TFound =  false;
+    let temp;
+    for(let element of cricket.teams)
+       {
+           if(element.teamName === Tname || element.ranking === Trank)
+           {
+           TFound = true;
+           break;
+           }
+       }
+       if(TFound)
+       {
+            console.log("Team already there / Ranking already there");
+       }
+       else{
+           temp  = addTeam(Tname,TOGround,Trank,Tcoach,Tplay11,Ttrophy);
+           console.log(temp);
+           cricket.teams.push(temp);
+           console.log("Successfully added Team!!!")
+       }
+ }
+
+ addWholeTeam('SouthAfrica','Johennesberg',3,addCoach('ab de villiers','dale steyn','jacques kallis'),
+ addPlaying11(true,'ad de villiers',35,'360 Batsaman',[playerIndiAchieve('fastestODI100',2015),
+ playerIndiAchieve('fastestT20150',2013)]),[]);
+function addTrophy(tname,tyear,topponent){
+   TrophyObj = {
+    trophyName:null,
+    year:null,
+    opponent:null 
+    }
+  TrophyObj.trophyName = tname;
+  TrophyObj.year = tyear;
+  TrophyObj.opponent = topponent;
+  return TrophyObj;
 }
-function addTeam(){
+function addTeam(Tname,TOGround,Trank,Tcoach,Tplay11,Ttrophy){
+     TeamObj = {
+        teamName:null,
+        ownGround:null,
+        ranking:null,
+        coach:{
+            batCoach:null,
+            bowlCoach:null,
+            headCoach:null,
+         },
+        playing11:[],
+         trophies:[]
 
+     }
+     TeamObj.teamName = Tname;
+     TeamObj.ownGround = TOGround;
+     TeamObj.ranking = Trank; 
+     TeamObj.coach = Tcoach;
+     TeamObj.playing11 = Tplay11;
+     TeamObj.trophies = Ttrophy;
+     return TeamObj;
+}
+
+function addCoach(batC,bowlC,headC){
+    coach = {
+        batCoach:null,
+        bowlCoach:null,
+        headCoach:null
+    }
+    coach.batCoach = batC;
+    coach.bowlCoach = bowlC;
+    coach.headCoach = headC;
+
+    return coach;
 }
 function playerIndiAchieve(achiveName,AchivYear){
 AchieveObj = {
@@ -278,4 +383,4 @@ AchieveObj = {
 AchieveObj.achievementName = achiveName;
 AchieveObj.year = AchivYear;
 return AchieveObj;
-}
+} 
