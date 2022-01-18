@@ -29,10 +29,10 @@
 // convertListToObject(obj);
 
 //problem4
-var arr = ["GUVI", "I", "am", "a geek"];
-function transformFirstAndLast(arr) {
-  newObject = {};
-    Object.assign(newObject,arr[0]);
- console.log(newObject);
-}
-transformFirstAndLast(arr);
+// var arr = ["GUVI", "I", "am", "a geek"];
+// function transformFirstAndLast(arr) {
+//   newObject = {};
+//     Object.assign(newObject,arr[0]);
+//  console.log(newObject);
+// }
+// transformFirstAndLast(arr);
