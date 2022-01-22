@@ -14,6 +14,7 @@ var a = new Promise((resolve,reject)=>{
 })
 a.then(res =>res.json()).then(json => console.log('json15',json));
 a.catch(error=>console.log(error));
+a.finally('i am always working');
 
 // 
 var b = new Promise(function(resolve,reject){
