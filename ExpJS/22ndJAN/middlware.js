@@ -9,7 +9,6 @@ var app = express();
 //   }
 
 app.use('/',function (req, res, next) {
-    console.error(err)
     console.log("i am middleware");
     res.status(500).send('Something broke!')
     console.log("i am middleware");

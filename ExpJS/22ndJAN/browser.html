@@ -2,7 +2,20 @@
 <html>
     <head>
         <title>Express JS</title>
-       <script src="asyncawait.js"> 
+       <script src="./asyncawait.js"> 
+       async function getvalues(req,res){
+    let response;
+    console.log('response',response);
+       response = await fetch('https://fakestoreapi.com/products/1');
+       console.log('response',response);
+    let value = await response.json();
+       console.log('valueconsole',value);
+       res.send(value);
+}
+getvalues();
+
+
+Promise.all([pro1,pro2])
             </script>
     </head>
     <body>
