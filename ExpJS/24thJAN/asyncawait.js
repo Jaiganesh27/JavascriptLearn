@@ -1,9 +1,6 @@
 var express  = require('express')
 var app = express()
 var fetch = require('cross-fetch');
-const { get } = require('./hAnimals');
-const { response } = require('express');
-
 
 // async and await
 

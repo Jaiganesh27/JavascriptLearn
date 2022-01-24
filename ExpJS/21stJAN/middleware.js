@@ -2,9 +2,9 @@
 // it will be special things when we use after req and before res.
 //it should have next statement to call after middleware works has beeen finished
 // middleware initiated by app.use
-var express  = require('express')
+var express  = require('express');
 var app = express();
-
+var router  = express.Router();
 var middle1 = function(req,res,next){
      console.log('hii jaiganesh i m mw1');
      console.log('hii jai m1');
@@ -31,9 +31,10 @@ app.get('/',(req,res)=>{
     
 })
 // middleware using route
-app.use('/jai/:id',function (req,res,next){
+router.use('/jai/:id',function (req,res,next){
+    console.log(req.params.id)
     console.log("he has been requested 1",req.method); 
-    if(req.params.id === '2'){
+    if(req.params.id == '2'){
         console.log('hii jai');
      next('route')
     }
