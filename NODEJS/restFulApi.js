@@ -4,8 +4,8 @@ format  - language
 protocol - rule
 lan/internet - medium
 
-soap -  uses xml format  - high bandwidth 
-rest -  uses xml ,json etc.  - low badwidth
+soap -  uses xml format ws security
+rest -  uses xml ,json etc. light weight 
 
 xml - tags used , big size(lines) no datatypes
 json - uses object ,array , small in size(lines) , used datatypes.
@@ -53,9 +53,6 @@ if we achieve this our api will be restful api
   put ->method update(entire) particular resource for a request - idempotent
   delete ->method will delete particular resource for a request - idempotent
   patch ->method will update(required) resources in the particular resource - idempotent 
-
-
-  idempotent - if we call api mutiple times it should not affect resource each time.
 */
 
 
@@ -102,3 +99,72 @@ package.json -  dependencies,name ,version,author,dev-dependencies,scripts etc.
 package.lock-json - it will lock the specific version for the project
 
 */
+
+/*
+node  modules
+ 1) core modules - these modules has been extracted from node modules using require keyword
+ 2) local modules - these modules has been extracted from locally created modules 
+ 3) thirdparty modules - these modules has been extracted from third party using require keyword
+ */
+
+
+// import * from express;
+// var express = require('express')
+
+/* require - can call any place of the Program -common js
+ automatically find node_modules
+ but will not we need to specify to import for the path of the module
+
+ for require we can specify all over the file but for import keyword 
+ we should  import it all from top of the page.
+
+ */
+// import - can only called from top of the page  -es6
+
+
+
+/*
+export default
+*/
+
+
+
+// node js server side javascript runtime environment
+// node js is single threaded and it has  evenet looping  concepts to 
+// leads it makes a asynchronous programming.
+
+
+
+// synchronous and asynchrounous
+// synchronous - server handles one request at a time . and it will take another
+// until it finishes it before received request.
+// asynchronous - node with asynchrounous and single threaded it firstly took the request an 
+// send it to the api before it finishes it will take another request and put it into the 
+// event looping when the first one respose arrives it took the response from server 
+// and send it back to the requested client.
+
+// sync = php 
+// async = node
+
+// console.log("hii1")
+// setTimeout(()=>{
+//    console.log("hii3");
+// },5000)
+// console.log("hii2")
+
+
+// express 
+//  1)  express do all the things node have and also will run
+//  top of the node it is framework and have extra feautres to easy the node and api works.
+
+/*
+dist/: "distribution", the compiled code/library, also named public/ or build/. The files meant for production or public use are usually located here.
+assets/: static content like images, video, audio, fonts etc.
+lib/: external dependencies (when included directly).
+test/: the project's tests scripts, mocks, etc.
+node_modules/: includes libraries and dependencies for JS packages, used by Npm.
+vendor/: includes libraries and dependencies for PHP packages, used by Composer.
+bin/: files that get added to your PATH when installed.
+*/ 
+
+

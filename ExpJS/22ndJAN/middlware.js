@@ -12,6 +12,7 @@ app.use('/',function (req, res, next) {
     console.log("i am middleware");
     res.status(500).send('Something broke!')
     console.log("i am middleware");
+    next()
   })
 // app.use(vari());
 

@@ -15,3 +15,16 @@ conn.connect((err)=>{
 
 
 module.exports = conn;
+
+var conn = mysql.createConnection({
+  host :"localhost",
+  user:"root",
+  password:"MYSqlRoot12345",
+  database:"fruits"
+
+})
+
+conn.connect(()=>{
+  if(err) throw err;
+  console.log("DB Connected!");
+})
