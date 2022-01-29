@@ -25,8 +25,7 @@ function needFood(){
     function prepareFood(callback){
         console.log("chef: got your order ");
         // food take time so time interval put this place
-        setTimeout((func)=>{
-            func();
+        setTimeout(()=>{
             console.log("chef: Your Food has been prepared!");
             callback();
         },5000,function (){console.log("chef :food process in progress");})

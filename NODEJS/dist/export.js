@@ -55,3 +55,4 @@ class School {
 }
 
 exports.default = School;
+console.log("Hii from export ");

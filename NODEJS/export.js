@@ -47,3 +47,5 @@ export default  class School{
  }
     
 }
+
+console.log("Hii from export ");

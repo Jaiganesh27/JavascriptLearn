@@ -18,3 +18,4 @@ console.log('Server is up and running by 8080 port');
 // var http = require('http');
 var _default = server;
 exports.default = _default;
+console.log("Hii from index");

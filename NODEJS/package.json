@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel index.js -d dist",
+    "build": "babel index.js import.js export.js -d dist",
     "start": "npm run build && node dist/index.js"
   },
   "author": "",
