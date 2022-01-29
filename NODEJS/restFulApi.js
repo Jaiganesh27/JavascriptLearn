@@ -158,12 +158,11 @@ export default
 //  top of the node it is framework and have extra feautres to easy the node and api works.
 
 /*
-dist/: "distribution", the compiled code/library, also named public/ or build/. The files meant for production or public use are usually located here.
+dist/: used for the compiled code.
 assets/: static content like images, video, audio, fonts etc.
 lib/: external dependencies (when included directly).
 test/: the project's tests scripts, mocks, etc.
 node_modules/: includes libraries and dependencies for JS packages, used by Npm.
-vendor/: includes libraries and dependencies for PHP packages, used by Composer.
 bin/: files that get added to your PATH when installed.
 */ 
 
