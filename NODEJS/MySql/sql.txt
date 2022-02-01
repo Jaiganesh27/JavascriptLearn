@@ -1,0 +1,72 @@
+
+
+
+
+sql - structured query language.
+rdbms -> relational database management system
+mysql is one of the structured query language.
+
+datatypes :
+string and number
+int  - numbers
+char  - character 
+varchar - strngs
+date and time datewith time
+date  -date (formattted with yyyy-mm--dd)
+datetime -   formatted with date along with hhmmss
+timestamp - formatted with date along with hhmmss
+time  -   hhmmss
+large object types
+text -  big data like html files
+blob - mp3 or images datas
+constraints - 
+1) not null
+2) check
+3) primary key
+4) foreign key
+5) unique
+6) default
+3) views - > virtual table used for selected query 
+4) index -> clustered index and non clustered
+
+
+
+
+
+DDL commands 
+ --> create alter truncate delete
+DML commands 
+ --> insert update delete
+DQL commands
+ --> selected
+DCL commnands
+ grant revoke
+TCL->
+  commit, rollback
+
+
+
+create database fruits;
+use database fruits;
+show databases;
+show tables;
+create table fruitstable;
+drop table fruitstable;
+truncate table fruitstable;
+alter table fruitstable rename to fruitstable1;
+select * from fruitstable;
+describe fruitstable;
+
+insert into fruitstable (name,price,mfgdate,store,kg) 
+values('orange',150,'2022-01-20','supermarket',5),
+('banana',50,'2022-01-25','supermarket',5),
+('grape',70,'2022-01-27','supermarket',11),
+('lemon',20,'2022-01-14','supermarket',11),
+('pineapple',120,'2022-01-13','supermarket',12),
+('strawberry',200,'2022-01-31','supermarket',12);
+
+
+
+select name,kg from fruitstable;
+select name,kg from fruitstable where kg=12;
+select * from fruitstable where name='lemon' and kg=11;

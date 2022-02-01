@@ -1,17 +1,15 @@
 var express = require('express')
-var app = express()
-var db = require('./database')
-var fruits = require('./routing')
+var app = express();
+var student = require('./routing')
+require('./database')
+app.use('/student',student);
 
-app.use(express.json());
-app.get('/',(req,res)=> {
-    res.send('it is our landing page');
+
+app.get("/",(req ,res)=>{
+ res.send("Hii I am Send Request!");
 })
-
-
-app.use('/fruits',fruits);
 
 app.listen(3000,(err)=>{
-   if(err) throw err
-   console.log("Server Connected");
-})
+    if(err) throw err;
+    console.log("Connected");
+});

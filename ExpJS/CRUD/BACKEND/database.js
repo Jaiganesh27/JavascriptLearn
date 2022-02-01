@@ -1,30 +1,17 @@
 var express = require('express')
-var app = express()
-var mysql = require('mysql')
-var conn = mysql.createConnection({
-    host:"localhost",
-  user:"root",
+var app = express();
+var mysql  = require('mysql')
+
+
+con = mysql.createConnection({
+  host:"localhost",
   password:"MySqlRoot12345",
-  database:'fruits',
-})
-
-conn.connect((err)=>{
-    if(err) throw err;
-    console.log("DB Connected!");
-})
-
-
-module.exports = conn;
-
-var conn = mysql.createConnection({
-  host :"localhost",
   user:"root",
-  password:"MYSqlRoot12345",
   database:"fruits"
-
 })
 
-conn.connect(()=>{
-  if(err) throw err;
-  console.log("DB Connected!");
+
+con.connect((err)=>{
+if(err) throw err;
+console.log("DB Connected!");
 })

@@ -1,24 +1,21 @@
 var express = require('express')
 var app = express();
 var router =  express.Router();
-var good = require('./good')
-router.post('/add',(req,res)=>{
+router.post('/',(req,res)=>{
     console.log(req.body,"req from add")
     res.json("post method hitted").status(400);
 })
-router.get('/list',(req,res)=>{
+router.get('/',(req,res)=>{
     console.log(req.body,"req from list")
     res.json("i am get method").status(200)
 })
-router.get('/list/:id',(req,res)=>{
-    console.log(req.body,"req from list id")  
-})
-router.put('/update',(req,res)=>{
+router.put('/',(req,res)=>{
     console.log(req.body,"req from delete")
 })
-router.delete('/delete',(req,res)=>{
+router.delete('/',(req,res)=>{
     console.log(req.body,"req from update")
+
+    app.use('/good',good)
 })
-app.use('/good',good)
 
 module.exports = router
