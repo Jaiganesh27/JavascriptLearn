@@ -21,6 +21,11 @@ console.log("database",database)
 database.reviews = require('./reviewModel.js')(sequelize,DataTypes)
 database.products = require('./productModel.js')(sequelize,DataTypes)
 
+db.products.hasMany(db.reviews, { as: "reviews" });
+db.comments.belongsTo(db.products, {
+  foreignKey: "productsId",
+  as: "products",
+});
 
 database.sequelize.sync({ force:false })
 .then(()=>{
