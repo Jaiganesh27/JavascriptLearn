@@ -1,4 +1,4 @@
-const { Op } = require('sequelize');
+const { Op,DataTypes } = require('sequelize');
 const db = require('../models/index.js');
 const Product = db.products;
 
@@ -152,6 +152,39 @@ Finders = async (req, res) => {
 
 
 }
+  
+getCreatedDateList = async(req,res)=>{
+    let sDate = req.body.sDate;
+    let eDate = req.body.eDate;
+    // let temp = eDate.getDate(); 
+    // console.log(temp)
+  let getAll = await Product.findAll({
+    where:{     
+    createdAt:{
+     [Op.or]:{
+          [Op.substring]:eDate,
+          [Op.between]:[sDate,eDate]
+      } 
+    }
+}
+        // validate:{
+        //     isAfter:sDate,
+        //     // isBefore:eDate
+        // }
+      // [Op.or]:[{
+                //  [Op.gte]: sDate,
+                //  [Op.lte]: eDate.toDate()
+                // },{
+                //     [Op.eq]:eDate.toDate()
+                // }
+            // ]
+               // [Op.or]:[{[Op.gte]:{createdAt:sDate}},{[Op.lt]:{createdAt:eDate}}] 
+
+    // }
+  })
+res.status(200).send(getAll);
+}
+
 
 
 module.exports = {
@@ -162,5 +195,6 @@ module.exports = {
     getOneProduct,
     getSpecificAttrib,
     getWhereClause,
-    Finders
+    Finders,
+    getCreatedDateList
 }

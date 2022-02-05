@@ -8,5 +8,5 @@ router.get('/getOneProduct/:id',productControl.getOneProduct);
 router.get('/getSpecificAttrib',productControl.getSpecificAttrib);
 router.get('/getWhereClause/:id',productControl.getWhereClause);
 router.get('/Finders/:id',productControl.Finders);
-
+router.get('/getCreatedDateList',productControl.getCreatedDateList);
 module.exports = router;
