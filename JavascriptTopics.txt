@@ -3,9 +3,10 @@ Javascript Learning Topics
 
 1) Basic Understanding : 
    ---------------------
-   --> What Is Javascript, Where we can use it.
-   --> How Javascript Run
-   --> Javascript Engine Works
+   --> What Is Javascript,Why should learn, Where we can use it.
+   --> How Javascript Run,
+   --> Javascript Engine Works,
+   --> Diff. engines and why we use ES5 on our browsers.
 
 2) Hoisting :
    ----------
@@ -15,7 +16,7 @@ Javascript Learning Topics
 3) DataTypes and Variables:
    ------------------------
    --> Types of  Datatypes.(primitive and non primitive datatypes)
-   --> Variable keywords in javascript.
+   --> Variable keywords in javascript(ex: var).
    --> Scope of Variables.
    --> var vs let vs const
   
@@ -24,7 +25,7 @@ Javascript Learning Topics
    --> Function and its definition, why we use it
    --> Types of Functions and their uses.
    --> Function Declaration, Expression ,Arrow ,Generator ,shorthand,IIF etc.
-   --> Rest Operator.
+   --> Rest Operator and spread operator.
 
 5) Conditional and Looping: 
 ---------------------------
@@ -35,4 +36,128 @@ Javascript Learning Topics
 -----------------------------
    --> One Dimensional , Multi Dimensional Arrays
    --> Array Prototypes(Methods).
+   --> Array Methods(ex:push,pop,filter etc.)
+
+7) Prototypes :
+---------------
+   --> What is Prototypes, how its works,
+   --> Difference between construtor methods vs prototypical methods.
+   --> How to access prototype properties.
+
+8) Javascript OOPS :
+--------------------
+   --> OOPS , Class and Objects, getter setters,
+   --> super class , derived class , construtor,static,
+   --> Encapsulation, Polymorphism , Data abstraction, Inheritance,
+   --> Inheritance , method overlaoding and overriding.
+
+9) JSON Format :
+----------------
+   --> What,why,where we can use JSON,
+   --> Understanding Json structure, XML vs JSON,
+   --> Manipulating JSON objects (Dynamically through functions).
+
+10) Regular Expression:
+-----------------------
+   --> Regular Expression why and their uses,
+   --> Flags , Quantifiers, Groups, Lookarounds, character class , Anchors etc.
+   --> Regular Expression Methods - exec , test ,match,replace ,search etc.
+
+11) Exception(Error) Handling:
+   --> What are Errors , why it should  be handled.
+   --> try ..catch..finally in exception handling.
+
+12) CallBacks :
+---------------
+  --> What is callback functions when why its used, how callback works,
+  --> Is javascript Asynchronous or syncronous?,
+  --> Callback functions and Callback hell,
+  --> Promises --> then , catch finally ,
+  --> Why we use async and await instead of Promises,
+  --> Promise methods  all,settled,any etc. 
+
+Express JS & Node JS:
+-----------     
+  --> How NodeJs Works Asynchronously,
+  --> How its working with call stack event looping.
+  --> What is Express.js how its works on head of nodeJS ,
+  --> Difference between node and express. 
+  --> What is npm and their packages, node modules,
+  --> How to setup own project ,npm vs npx ,
+  --> package.json and package-lock.json
    
+Import vs Exports:
+------------------
+  --> ES6 imports vs CommonJS(ES5) imports exports,
+  --> How to run ES6 on ES5 packages,
+  --> Difference between require and import statements,
+  --> Ways to imports and exports modules,
+
+Babel :
+  --> What is Babel Why we use it,
+  --> How to configure babel in packages ,
+  --> presets,plugins, and transpiling ES6 code into ES5 code.
+
+HTTP:
+---- 
+  --> URI vs URL vs URN,
+  --> What is Http and its methods(GET,POST,PUT,DELETE,PATCH),
+  --> Http vs Https,
+  --> Http response status codes, 
+
+RestFul API :
+  --> What are web services ,why we use it,
+  --> What is API how and why we use it , where it all it used and their types,
+  --> What is rest web services and soap web services,
+  --> REST contraints, How rest advantage over than SOAP services,
+  --> Rest vs RestFul API,
+
+Express : 
+  --> Routing Concepts -  how to route server to endpoints,
+  --> Middlewares, why we use and their types,
+  --> Important Middlesware packages.
+
+MYSQL Database:
+  --> MYSql database, relational vs Nosql , 
+  --> DDL,DML,DCL,TCL commands queries ,
+  --> Joins (InnerJoin , RightJoin and LeftJoin).
+  --> How to connect MySql with Express.
+  --> Workbench installation and executing query commands,
+  --> How to Generate ERR diagram for existing database.
+
+Sequelize ORM :
+  --> What is Sequelize ORM , 
+  --> Why We need object relational mapping,
+  --> Connection with Database ,
+  --> Creating Models(Entities) with constraints and validations,
+  --> Datatypes , operators , model instances(create , build,save, destroy,reload etc).
+  --> Model Finders - findAll, findByPk,findOne,findAndCountAll ,findAndCreate, 
+  --> Model validations and Associations(hasOne,hasMany,belongsTo,belongsToMany).
+  --> Migrations and Seeders( undo, restore),
+  --> Panaroid - (deleteAt,restore) and getter setter virtuals.
+
+JWT :
+  --> What is JWT Why we need JWT claims authentications,
+  --> what is encode and encrypt, how it differ from each other. 
+  --> JWT vs OAUTH, JWT Structure( Headers, Payload ,Signature and Secret Key).
+  --> What is Token and diff. between Access Token and Refresh Token , 
+  --> Token vs Bearer Token 
+  --> validations sample useremail and Password with jwt authentications,
+
+Hashing and Schema Validation :
+  --> What is Hashing and why we need to encrypt Important data,
+  --> Password hashing with Bcrypt and crypto npm packages , crypto vs Bcrypt,
+  --> Why We need to Validate Req input data,
+  --> Schema validation using Joi .
+  
+ 
+
+
+
+  
+  
+
+
+
+
+    
