@@ -10,9 +10,8 @@ Javascript Learning Topics
 
 2) Hoisting :
    ----------
-   --> Hoisting in Javascript
+   --> Hoisting in Javascript , Why need to learn hoisting,
    --> Variable hoisting and functional hoisting.
-
 3) DataTypes and Variables:
    ------------------------
    --> Types of  Datatypes.(primitive and non primitive datatypes)
@@ -149,7 +148,7 @@ Hashing and Schema Validation :
   --> Password hashing with Bcrypt and crypto npm packages , crypto vs Bcrypt,
   --> Why We need to Validate Req input data,
   --> Schema validation using Joi .
-  
+
  
 
 
