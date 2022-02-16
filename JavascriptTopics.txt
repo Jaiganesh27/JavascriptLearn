@@ -151,6 +151,14 @@ Hashing and Schema Validation :
 
  
 
+Javascript :
+   How Javascript works,
+   How its working internally, Compiler and interpreter,
+   How javascript engine works,and its structure.
+   Global and local scopes.
+   Memory Allocation in javascript.
+   What are the Datatypes in JS how its working.
+
 
 
   
