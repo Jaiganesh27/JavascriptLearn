@@ -33,24 +33,60 @@ console.log(sampleJson);
 
 let temp = [];
 let finalData = [];
-let funCard = {quantity :null};
+
 sampleJson.forEach(ele => {
-  if (ele && ele.newFunCard  &&  ele.newFunCard.length != 0) {
+  let funCard = {
+    quantity: null,
+    playerCount: null,
+    gravityPlayCount: null,
+    gameQuantity: null
+  };
+  if (ele && ele.newFunCard && ele.newFunCard.length !== 0) {
     temp = ele.newFunCard.map(fun => {
       if (fun && fun.quantity) {
-          return fun.quantity;
+        return fun.quantity;
       }
-      console.log("temp",temp);
-     funCard.quantity = temp.reduce((pre,cur)=>{
-         return pre + cur;
-      })
-
-        })
+    })
+    funCard.quantity = temp.reduce((pre, cur) => {
+      return pre + cur;
+    })
   }
-  })
+  if (ele && ele.laserTag && ele.laserTag.length !== 0) {
+    temp = ele.laserTag.map(fun => {
+      if (fun && fun.playerCount) {
+        return fun.playerCount;
+      }
+    })
+    funCard.playerCount = temp.reduce((pre, cur) => {
+      return pre + cur;
+    })
+  }
+  if (ele && ele.gravityRope && ele.gravityRope.length !== 0) {
+    temp = ele.gravityRope.map(fun => {
+      if (fun && fun.player) {
+        return fun.player;
+      }
+    })
+    funCard.gravityPlayCount = temp.reduce((pre, cur) => {
+      return pre + cur;
+    })
+  }
+  if (ele && ele.birdly && ele.birdly.length !== 0) {
+    temp = ele.birdly.map(fun => {
+      if (fun && fun.gameQuantity) {
+        return fun.gameQuantity;
+      }
+    })
+    funCard.gameQuantity = temp.reduce((pre, cur) => {
+      return pre + cur;
+    })
+  }
 
-console.log(temp, funCard.quantity);
-// separating arrays
+  finalData.push(funCard);
+})
+
+console.log(temp, finalData);
+// separating arraysfinalDatas
 // newFunCard = sampleJson.map(ele => {
 //   return ele.newFunCard;
 // })
@@ -134,10 +170,18 @@ const element = (
       {this.conditionRenderElement}
       */}
 
-    <h1>FuncardQuantity = {masterQuantity}</h1>
-    <h1>LaserTagPlayerCount = {masterPlayerCount}</h1>
-    <h1>GravityPlayerCount = {masterPlayer}</h1>
-    <h1>BirdlyGameQuantity = {masterGameQuantity}</h1>
+    {
+      finalData && finalData.map(ele => {
+        return(
+        <div>
+        FunCard Quantity X {ele.quantity?ele.quantity:0}
+        LaserTag PlayerCount X {ele.playerCount?ele.playerCount:0}
+        GravityRope Player X {ele.gravityPlayCount?ele.gravityPlayCount:0}
+        Birdly GameQuantity X {ele.gameQuantity?ele.gameQuantity:0}
+        <br></br><hr></hr>
+        </div>
+      )})
+      }
   </div>
 )
 ReactDOM.render(
