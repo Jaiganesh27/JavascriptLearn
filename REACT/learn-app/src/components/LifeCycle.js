@@ -3,8 +3,6 @@ class LifeCycle extends Component {
     constructor() {
         super();
         this.state = { counter: 0 ,date : new Date().toLocaleString()};
-
-        var time;
     }
     render() {
         return (
@@ -18,7 +16,6 @@ class LifeCycle extends Component {
         );
     }
     componentDidMount() {
-        this.timeChange();
         console.log("counter in compDidMount :", this.state.counter);
 
     }
@@ -26,7 +23,6 @@ class LifeCycle extends Component {
         console.log("counter in compDidUpdate :", this.state.counter)
     }
     componentWillUnmount() {
-        clearInterval(this.time);
         console.log("counter in compWillUnmount :", this.state.counter);
     }
 
@@ -36,13 +32,6 @@ class LifeCycle extends Component {
     }
     stateChangeSub = () => {
         this.setState({ counter: this.state.counter - 1 });
-    }
-
-
-    timeChange = () =>{
-       this.time = setInterval(() => {
-           this.setState({date:new Date().toLocaleString()})
-        }, 1000);
     }
 }
 

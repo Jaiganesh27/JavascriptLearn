@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import ConditionRender from './components/ConditionRender';
+import UserLogInOut from './components/UserLogInOut';
+import Page from './components/Warning';
 // import reportWebVitals from './reportWebVitals';
 // import sample from './sample.json';
 // import Car from './components/Car';
@@ -78,5 +81,5 @@ import App from './App';
 //   </div>
 //)
 ReactDOM.render(
-  <App />, document.getElementById('root')
+  <Page />, document.getElementById('root')
 )
