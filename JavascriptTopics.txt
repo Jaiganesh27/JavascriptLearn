@@ -23,7 +23,7 @@ Javascript Learning Topics
    ----------
    --> Function and its definition, why we use it
    --> Types of Functions and their uses.
-   --> Function Declaration, Expression ,Arrow ,Generator ,shorthand,IIF etc.
+   --> Function Declaration, Expression ,Arrow ,Generator ,shorthand,IIF etc. recursive function
    --> Rest Operator and spread operator.
 
 5) Conditional and Looping: 

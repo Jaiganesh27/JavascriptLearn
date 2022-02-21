@@ -1,10 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { unstable_renderSubtreeIntoContainer } from 'react-dom';
 import './index.css';
 import App from './App';
 import ConditionRender from './components/ConditionRender';
 import UserLogInOut from './components/UserLogInOut';
 import Page from './components/Warning';
+
+
+import Blog from './components/ListKeys';
+import Forms from './components/Forms';
+import axios from 'axios';
+import RegisterForm from './components/RegisterForm';
+
+axios.defaults.baseURL = 'http://localhost:8081/api/user/';
+
 // import reportWebVitals from './reportWebVitals';
 // import sample from './sample.json';
 // import Car from './components/Car';
@@ -80,6 +89,25 @@ import Page from './components/Warning';
 //     <CarClass />
 //   </div>
 //)
-ReactDOM.render(
-  <Page />, document.getElementById('root')
-)
+let userData = [];
+let  getUserList = async () =>{
+  try{  
+  let result = await axios.get('/list');
+  let userData =await result.data;
+  console.log(userData); 
+  ReactDOM.render(
+    // <Blog userData = {userData}/>, document.getElementById('root')
+    // <Forms value ={val}/>, document.getElementById('root')
+    <RegisterForm />, document.getElementById('root')
+  )
+  return userData; 
+  }
+  catch(err){
+    console.log("err",err);
+  }           
+  }
+  getUserList();
+  
+
+  console.log(userData);        
+
